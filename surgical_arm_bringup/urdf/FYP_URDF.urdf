@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="FYP_URDF">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.54029 0.86322 1.3008"
+        rpy="0 0 0" />
+      <mass
+        value="2.4713" />
+      <inertia
+        ixx="0.0039304"
+        ixy="1.2845E-08"
+        ixz="-2.0732E-09"
+        iyy="0.0055209"
+        iyz="-1.1694E-05"
+        izz="0.0039592" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surgical_arm_bringup/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surgical_arm_bringup/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="-0.071917 0.068679 -0.036769"
+        rpy="0 0 0" />
+      <mass
+        value="1.5294" />
+      <inertia
+        ixx="0.00060901"
+        ixy="9.9348E-05"
+        ixz="-0.00010589"
+        iyy="0.00090612"
+        iyz="7.505E-05"
+        izz="0.00080552" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surgical_arm_bringup/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surgical_arm_bringup/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="waist_joint"
+    type="revolute">
+    <origin
+      xyz="0.54029 -1.301 0.93598"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.5713"
+      upper="1.5713"
+      effort="46"
+      velocity="1.5713" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="-0.1351 -2.5762E-05 0.035647"
+        rpy="0 0 0" />
+      <mass
+        value="1.7967" />
+      <inertia
+        ixx="0.00064471"
+        ixy="-6.177E-06"
+        ixz="5.9143E-05"
+        iyy="0.0034332"
+        iyz="2.9089E-07"
+        izz="0.0036498" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surgical_arm_bringup/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surgical_arm_bringup/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.0834 -0.049228"
+      rpy="3.1416 1.5708 0" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="3.1426"
+      effort="9.88"
+      velocity="1.5713" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="-0.039044 -0.056714 -0.0078089"
+        rpy="0 0 0" />
+      <mass
+        value="0.76472" />
+      <inertia
+        ixx="0.0037211"
+        ixy="-0.00049084"
+        ixz="0.00012375"
+        iyy="0.00062282"
+        iyz="0.0003546"
+        izz="0.0040029" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surgical_arm_bringup/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surgical_arm_bringup/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="elbow_joint"
+    type="revolute">
+    <origin
+      xyz="-0.19 0 0"
+      rpy="0 0 1.5708" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.1426"
+      upper="0"
+      effort="7.28"
+      velocity="1.5713" />
+  </joint>
+  <link
+    name="end_effector">
+    <inertial>
+      <origin
+        xyz="0.020183 0.019522 3.9659E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.039757" />
+      <inertia
+        ixx="5.8694E-06"
+        ixy="3.0563E-08"
+        ixz="-6.1291E-14"
+        iyy="6.6558E-06"
+        iyz="-3.1348E-13"
+        izz="9.9744E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surgical_arm_bringup/meshes/end_effector.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://surgical_arm_bringup/meshes/end_effector.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="end_effector_joint"
+    type="fixed">
+    <origin
+      xyz="-0.06427 -0.21 -0.020349"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="link_3" />
+    <child
+      link="end_effector" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <ros2_control name="GazeboSimSystem" type="system">
+    <hardware>
+      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+    </hardware>
+    
+    <joint name="waist_joint">
+      <command_interface name="effort"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+
+    <joint name="shoulder_joint">
+      <command_interface name="effort"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+
+    <joint name="elbow_joint">
+      <command_interface name="effort"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+  </ros2_control>
+
+  <gazebo>
+    <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+      <parameters>/home/foochiaern/ros2_ws/install/surgical_arm_bringup/share/surgical_arm_bringup/config/controllers.yaml</parameters>
+    </plugin>
+  </gazebo>
+</robot>

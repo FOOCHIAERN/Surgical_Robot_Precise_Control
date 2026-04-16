@@ -1,0 +1,17 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 1000  # Run the control loop at 1000Hz in simulation
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    effort_controller:
+      type: forward_command_controller/ForwardCommandController
+
+effort_controller:
+  ros__parameters:
+    joints:
+      - joint_1
+      - joint_2
+      - joint_3
+    interface_name: effort
